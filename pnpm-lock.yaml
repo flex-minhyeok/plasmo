@@ -107,8 +107,8 @@ importers:
         specifier: 3.1.0
         version: 3.1.0
       cross-env:
-        specifier: 7.0.3
-        version: 7.0.3
+        specifier: 10.1.0
+        version: 10.1.0
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.13.13)(babel-plugin-macros@3.1.0)
@@ -152,8 +152,8 @@ importers:
         specifier: 22.13.13
         version: 22.13.13
       cross-env:
-        specifier: 7.0.3
-        version: 7.0.3
+        specifier: 10.1.0
+        version: 10.1.0
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.13.13)(babel-plugin-macros@3.1.0)
@@ -191,8 +191,8 @@ importers:
         specifier: 19.0.12
         version: 19.0.12
       cross-env:
-        specifier: 7.0.3
-        version: 7.0.3
+        specifier: 10.1.0
+        version: 10.1.0
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.13.13)(babel-plugin-macros@3.1.0)
@@ -4547,6 +4547,9 @@ packages:
   '@emotion/weak-memoize@0.3.1':
     resolution: {integrity: sha512-EsBwpc7hBUJWAsNPBmJy4hxWx12v6bshQsldrVmjxJoc3isbxhOrF2IcCpaXxfvq03NwkI7sbsOLXbYuqF/8Ww==}
 
+  '@epic-web/invariant@1.0.0':
+    resolution: {integrity: sha512-lrTPqgvfFQtR/eY/qkIzp98OGdNJu0m5ji3q/nJI8v3SXkRKEnWiOxMmbvcSoAIzv/cGiuvRy57k4suKQSAdwA==}
+
   '@esbuild/aix-ppc64@0.23.1':
     resolution: {integrity: sha512-6VhYk1diRqrhBAqpJEdjASR/+WVRtfjpqKuNw11cLiaWpAT/Uu+nokB+UJnevzy/P9C/ty6AOe0dwueMrGh/iQ==}
     engines: {node: '>=18'}
@@ -8467,6 +8470,11 @@ packages:
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     hasBin: true
 
+  cross-env@10.1.0:
+    resolution: {integrity: sha512-GsYosgnACZTADcmEyJctkJIoqAhHjttw7RsFrVoJNXbsWWqaq6Ym+7kZjq6mS45O0jij6vtiReppKQEtqWy6Dw==}
+    engines: {node: '>=20'}
+    hasBin: true
+
   cross-env@7.0.3:
     resolution: {integrity: sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==}
     engines: {node: '>=10.14', npm: '>=6', yarn: '>=1'}
@@ -12385,6 +12393,7 @@ packages:
   source-map@0.8.0-beta.0:
     resolution: {integrity: sha512-2ymg6oRBpebeZi9UUNsgQ89bhx01TcTkmNTGnNO88imTmbSgy4nfujrgVEFKWpMTEGA11EDkTt7mqObTPdigIA==}
     engines: {node: '>= 8'}
+    deprecated: The work that was done in this beta branch won't be included in future versions
 
   spdx-correct@3.2.0:
     resolution: {integrity: sha512-kN9dJbvnySHULIluDHy32WHRUu3Og7B9sbY7tsFLctQkIqnMh3hErYgdMjTYuqmcXX+lK5T1lnUt3G7zNswmZA==}
@@ -14627,6 +14636,8 @@ snapshots:
   '@emotion/utils@1.2.1': {}
 
   '@emotion/weak-memoize@0.3.1': {}
+
+  '@epic-web/invariant@1.0.0': {}
 
   '@esbuild/aix-ppc64@0.23.1':
     optional: true
@@ -19169,6 +19180,11 @@ snapshots:
       - babel-plugin-macros
       - supports-color
       - ts-node
+
+  cross-env@10.1.0:
+    dependencies:
+      '@epic-web/invariant': 1.0.0
+      cross-spawn: 7.0.6
 
   cross-env@7.0.3:
     dependencies:
